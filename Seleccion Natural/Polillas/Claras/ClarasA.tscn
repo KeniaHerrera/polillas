@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Jugador/p1.png" type="Texture" id=1]
+[ext_resource path="res://Jugador/p2.png" type="Texture" id=2]
+[ext_resource path="res://Jugador/P3.png" type="Texture" id=3]
+[ext_resource path="res://Polillas/Claras/ClarasA.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 25.1794
+
+[node name="ClarasA" type="Node2D"]
+use_parent_material = true
+position = Vector2( -1, 0 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -38.0
+margin_top = -22.0
+margin_right = 36.0
+margin_bottom = 36.0
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.115046, 0.107176 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[connection signal="ConteoClaras" from="." to="." method="_on_ClarasA_ConteoClaras"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
