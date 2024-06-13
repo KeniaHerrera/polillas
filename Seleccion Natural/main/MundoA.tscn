@@ -1,7 +1,5 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Polillas/Claras/ClarasA.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Polillas/MelanicasA/MelanicasA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://main/MundoA.gd" type="Script" id=3]
 [ext_resource path="res://main/Imagen de WhatsApp 2024-04-04 a las 14.02.03_1cc9d13a.jpg" type="Texture" id=4]
 [ext_resource path="res://Interfaz.tscn" type="PackedScene" id=5]
@@ -13,83 +11,9 @@ script = ExtResource( 3 )
 position = Vector2( 512, 512 )
 texture = ExtResource( 4 )
 
-[node name="ClarasA" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 376, 240 )
-
-[node name="ClarasA2" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 664, 184 )
-
-[node name="ClarasA3" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 200, 752 )
-
-[node name="ClarasA4" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 720, 832 )
-
-[node name="ClarasA5" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 120, 336 )
-
-[node name="MelanicasA" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 848, 192 )
-
-[node name="MelanicasA2" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 898, 658 )
-
-[node name="MelanicasA3" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 927, 404 )
-
-[node name="MelanicasA4" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 234, 537 )
-
-[node name="MelanicasA5" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 136, 160 )
-
 [node name="Container" type="Container" parent="."]
 margin_right = 1024.0
 margin_bottom = 1048.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
-margin_right = 158.0
-margin_bottom = 68.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/HBoxContainer"]
-margin_right = 158.0
-margin_bottom = 68.0
-
-[node name="Tiempo" type="Label" parent="Container/HBoxContainer/VBoxContainer"]
-modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-self_modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-margin_right = 158.0
-margin_bottom = 14.0
-text = "Time: "
-uppercase = true
-
-[node name="Claras" type="Label" parent="Container/HBoxContainer/VBoxContainer"]
-modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-self_modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-margin_top = 18.0
-margin_right = 158.0
-margin_bottom = 32.0
-text = "Claras atrapadas: "
-uppercase = true
-
-[node name="Melanicas" type="Label" parent="Container/HBoxContainer/VBoxContainer"]
-modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-self_modulate = Color( 0.894118, 0.0588235, 0.0588235, 1 )
-margin_top = 36.0
-margin_right = 158.0
-margin_bottom = 50.0
-text = "Melanicas Atrapadas:"
-uppercase = true
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

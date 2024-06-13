@@ -80,11 +80,9 @@ func pos_unica():
 func _on_Timer_timeout():
 	time_mundo -= 1
 	get_node("MarginContainer/VBoxContainer/Tiempo").text = "Tiempo: " + str(time_mundo)
-	get_node("MarginContainer/VBoxContainer2/Nivel").text = "Nivel: " + str(nivel)
 	if time_mundo <= 0:
-		actualizar_polillas()
-		nivel += 1 
-		iniciar_nivel()
+		get_tree().quit()
+		
 
 func _on_ClarasA_pressed():
 	claras += 1
